@@ -37,7 +37,7 @@ def indices2graph(pos_dict, indices, circle):
     :param circle: how man indices from a circle
     :return:
     """
-    if len(indices) % 3 != 0:
+    if len(indices) % circle != 0:
         print('Error! The length of the indices must be a multiply of {}'.format(circle))
         return None
 
@@ -47,6 +47,12 @@ def indices2graph(pos_dict, indices, circle):
         for j in range(circle):
             idx1 = indices[i + j]
             idx2 = indices[i + (j + 1) % circle]
+
+            if idx1 > idx2:
+                tmp = idx1
+                idx1 = idx2
+                idx2 = tmp
+
             graph['({},{})'.format(idx1, idx2)] = distance(np.array(pos_dict[idx1]), np.array(pos_dict[idx2]))
     return graph
 

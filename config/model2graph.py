@@ -21,4 +21,8 @@ dimension = 3
 # how many indices form a circle
 circle = 3
 
+# the start index of vertices in OFF file (counting from 0)
+vertex_start = 2
 
+# separator between elements in each line
+off_sep = ' '
