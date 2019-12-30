@@ -37,6 +37,6 @@ pos_dict = utils.index_position(positions, config.dimension)
 
 graph = utils.indices2graph(pos_dict, indices, config.circle)
 
-utils.save_json('graph.json', graph)
-utils.save_json('position.json', pos_dict)
-utils.save_json('geometry.json', json_obj)
+utils.save_json('../data/graph.json', graph)
+utils.save_json('../data/position.json', pos_dict)
+utils.save_json('../data/geometry.json', json_obj)

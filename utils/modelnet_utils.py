@@ -90,7 +90,7 @@ def faces2graph_list(pos_dict, faces):
 
 def save_list(filename, graph):
     with open(filename, 'w') as fh:
-        for i in graph:
+        for i in sorted(graph.keys(), key=lambda x: int(x.split(config.graph_sep)[0])):
             print(i, graph[i])
             fh.write(config.graph_sep.join([i, str(graph[i])]))
             fh.write('\n')

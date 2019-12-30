@@ -33,4 +33,4 @@ graph = modelnet_utils.faces2graph_list(pos_dict, faces)
 # print(len(graph.keys()))
 
 # my_json.save('modelnet_table.json', graph)
-modelnet_utils.save_list('table.txt',graph)
+modelnet_utils.save_list('../data/table.txt',graph)
