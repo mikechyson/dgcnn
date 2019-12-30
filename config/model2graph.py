@@ -26,3 +26,6 @@ vertex_start = 2
 
 # separator between elements in each line
 off_sep = ' '
+
+# graph list file separator
+graph_sep = ','

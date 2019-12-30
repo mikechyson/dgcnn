@@ -28,8 +28,9 @@ faces = lines[config.vertex_start + num_vertices:]
 # print(faces)
 # print(len(faces))
 
-graph = modelnet_utils.faces2graph(pos_dict, faces)
+graph = modelnet_utils.faces2graph_list(pos_dict, faces)
 # print(graph)
 # print(len(graph.keys()))
 
-my_json.save('modelnet_table.json', graph)
+# my_json.save('modelnet_table.json', graph)
+modelnet_utils.save_list('table.txt',graph)
